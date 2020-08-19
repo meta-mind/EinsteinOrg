@@ -1,6 +1,6 @@
 /******************************************************************************
 * Class handles all logic pertaining to Juso address validation functionality
-* @Author: Mukesh 
+* @Author: ChangeMeIn@UserSettingsUnder.SFDoc
 * @Date: Nov-2019
 * @JIRA: CARE-645,655
 ******************************************************************************/
@@ -15,11 +15,12 @@ public class Care_JusoIntegrationController {
     @AuraEnabled(cacheable=true)
     public static String getAddress(String addressLine1, String addressLine2,String cityOrTown,String stateRegion, String zipCode){
         
-        //forming search String
+        //forming search String here
         String searchString ='';
         if(String.isNotBlank(addressLine1))
         {
             searchString = addressLine1;
+            
         }
         if(String.isNotBlank(addressLine2))
         {
